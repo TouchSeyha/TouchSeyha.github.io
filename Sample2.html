@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        .myImg{
+            background-color: aqua;
+            width: 300px;
+            height: 250px;
+            float:left;
+            margin: 5px;
+            border-radius:25px;
+            position: relative;
+            background-size: cover;
+        }
+        .txt{
+            background-color: green;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            color: white;
+            border-radius: 0 0 25px 25px;
+            opacity: 0.5;
+        }
+    </style>
+    
+<div id="mainImg">
+    
+    
+</div>
+
+<script>
+    let text="";
+    let imgArr=[
+        {img:'https://images2.minutemediacdn.com/image/upload/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/64488-gettyimages-155376463-8998e5b17fa838e284c7f292f76b3fa4.jpg', txt:'Timetablesdfsdf'},
+        {img:'https://erepublic.brightspotcdn.com/dims4/default/0ab337b/2147483647/strip/false/crop/1360x1020+0+0/resize/1360x1020!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2Fc6%2F3c%2F0c1ccfca4ab79db2dc0e365cf9f4%2Fzacherys-playground.jpg', txt:'Our Price'},
+        {img:'https://static.vecteezy.com/system/resources/thumbnails/001/436/934/small_2x/empty-school-outdoor-playground-free-vector.jpg',txt:'Our Gallery'}
+]
+for(let i=0;i<imgArr.length;i++){
+text+="<div class='myImg' style='background-image:url("+ imgArr[i].img +")'>"+
+            "<div class='txt'>" +imgArr[i].txt+ "</div>"+
+        "</div>"
+
+}
+document.getElementById("mainImg").innerHTML=text;
+
+</script>
+</body>
+</html>
